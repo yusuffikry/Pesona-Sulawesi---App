@@ -1,13 +1,19 @@
 package com.example.pesonasulawesi.Adapter;
 
+import android.app.Dialog;
+import android.content.Context;
 import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.cardview.widget.CardView;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.pesonasulawesi.Account.AccountHistory;
@@ -48,6 +54,16 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
             holder.posthistory.setImageURI(img2);
         }
         holder.captionhistory.setText(history.getCaptionhistory());
+
+        holder.deletepost.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int adapterPosition = holder.getAdapterPosition();
+                if (adapterPosition != RecyclerView.NO_POSITION) {
+                    showDeleteConfirmationDialog(holder.itemView.getContext(), adapterPosition);
+                }
+            }
+        });
     }
 
 
@@ -61,6 +77,8 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
         TextView fullnamehistory, usernamehistory, captionhistory;
         ImageView profilehistory, posthistory;
 
+        CardView deletepost;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             fullnamehistory = itemView.findViewById(R.id.user_historyfullname);
@@ -68,6 +86,39 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.ViewHold
             captionhistory = itemView.findViewById(R.id.usercaptionhistory);
             profilehistory = itemView.findViewById(R.id.profilehistory);
             posthistory = itemView.findViewById(R.id.userimagehistory);
+            deletepost = itemView.findViewById(R.id.deletepost);
+
         }
+    }
+
+    private void showDeleteConfirmationDialog(Context context, int position) {
+
+        Dialog dialog = new Dialog(context);
+        dialog.setContentView(R.layout.dialog_delete_post);
+        dialog.getWindow().setLayout(ViewGroup.LayoutParams.WRAP_CONTENT,ViewGroup.LayoutParams.WRAP_CONTENT);
+        dialog.getWindow().setBackgroundDrawable(ContextCompat.getDrawable(context, R.drawable.custom_dialog_bg));
+
+        Button btnCancel = dialog.findViewById(R.id.btn_cancel);
+        Button btnDelete = dialog.findViewById(R.id.btn_delete);
+
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                dialog.dismiss();
+            }
+        });
+
+        btnDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                histories.remove(position);
+                notifyItemRemoved(position);
+                dialog.dismiss();
+                Toast.makeText(context, "Data Berhasil Dihapus", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        dialog.show();
     }
 }
