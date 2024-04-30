@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutActivity"
+    android:padding="20dp"
+    android:background="@color/hijauKeputihan">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_destination"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:src="@drawable/icon_sulsel"/>
+
+            <TextView
+                android:id="@+id/location_about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sulawesi Selatan"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:fontFamily="@font/font"/>
+
+            <TextView
+                android:id="@+id/top_five"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Top 5 Destination in Sulawesi Selatan"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:id="@+id/point1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1. Bulukumba"
+                android:fontFamily="@font/font"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/picture1"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:src="@drawable/bulukumba_image1"
+                android:padding="8dp"/>
+
+            <TextView
+                android:id="@+id/description1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:text="Pantai Tanjung Bira adalah salah satu pantai terindah di Sulawesi Selatan. Pantai ini terkenal dengan pasir putihnya yang halus, air lautnya yang jernih, dan pemandangan matahari terbenam yang menakjubkan. Di sini, Anda dapat berenang, berjemur, snorkeling, diving, atau simply bersantai di tepi pantai."/>
+
+            <TextView
+                android:id="@+id/point2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="2. Tana Toraja"
+                android:fontFamily="@font/font"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/picture2"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:src="@drawable/bulukumba_image1"
+                android:padding="8dp"/>
+
+            <TextView
+                android:id="@+id/description2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:text="Tana Toraja adalah sebuah dataran tinggi di Sulawesi Selatan yang terkenal dengan budaya dan tradisi yang unik. Di sini, Anda dapat melihat rumah-rumah Tongkonan yang khas, kuburan yang digantung di tebing, dan upacara Rambu Solo' yang sakral."/>
+
+            <TextView
+                android:id="@+id/point3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="3. Taman nasional Bantimurung"
+                android:fontFamily="@font/font"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/picture3"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:src="@drawable/bulukumba_image1"
+                android:padding="8dp"/>
+
+            <TextView
+                android:id="@+id/description3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:text="Taman Nasional Bantimurung Maros adalah taman nasional yang terletak di Kabupaten Maros, Sulawesi Selatan. Taman nasional ini terkenal dengan air terjunnya yang indah, gua-gua yang misterius, dan flora dan fauna yang beragam. Di sini, Anda dapat trekking, hiking, caving, atau simply menikmati keindahan alam."/>
+
+            <TextView
+                android:id="@+id/point4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="4. Pulau Samalona"
+                android:fontFamily="@font/font"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/picture4"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:src="@drawable/bulukumba_image1"
+                android:padding="8dp"/>
+
+            <TextView
+                android:id="@+id/description4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:text="Pulau Samalona adalah sebuah pulau kecil yang terletak di lepas pantai Makassar. Pulau ini terkenal dengan pantainya yang indah, air lautnya yang jernih, dan terumbu karang yang masih alami. Di sini, Anda dapat snorkeling, diving, atau simply bersantai di tepi pantai."/>
+
+            <TextView
+                android:id="@+id/point5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="5. Hutan Mangrove Tangkoe"
+                android:fontFamily="@font/font"
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"/>
+
+            <ImageView
+                android:id="@+id/picture5"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:src="@drawable/bulukumba_image1"
+                android:padding="8dp"/>
+
+            <TextView
+                android:id="@+id/description5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:text="Hutan Mangrove Tongke-Tongke adalah hutan bakau yang terletak di Kabupaten Pangkep, Sulawesi Selatan. Hutan bakau ini adalah rumah bagi berbagai jenis flora dan fauna, termasuk burung, ikan, dan reptil. Di sini, Anda dapat menyusuri hutan bakau dengan perahu, melihat monyet kra, atau simply menikmati udara segar."/>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+</LinearLayout>
